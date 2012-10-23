@@ -129,7 +129,7 @@ public class SumsTest {
 		assertEquals("FAILING - UNEQUAL",input1,10);
 	}
 
-
+	//EXCEPTION TESTING with credit to Jakob Jenkov @ http://tutorials.jenkov.com/java-unit-testing/exceptions.html
 	@Test
 	public void This_tests_exception_trycatch_method() {
 
@@ -147,7 +147,7 @@ public class SumsTest {
 		}
 	}
 
-
+	//EXCEPTION TESTING with credit to Jakob Jenkov @ http://tutorials.jenkov.com/java-unit-testing/exceptions.html
 	@Test(expected = ArithmeticException.class)
 	public void This_tests_exception_not_trycatch() {
 
