@@ -21,7 +21,7 @@ public class OtherTestSet {
 		int expected = 45;
 		int output;
 		
-		MathematicalOperation classUnderTest = new adder();
+		MathematicalOperation classUnderTest = new Adder();
 		
 		output = classUnderTest.operations(input1,input2);
 		
@@ -37,7 +37,7 @@ public class OtherTestSet {
 		int expected = 5;
 		int output;
 		
-		MathematicalOperation classUnderTest = new minus();
+		MathematicalOperation classUnderTest = new Minus();
 		
 		output = classUnderTest.operations(input1,input2);
 		
