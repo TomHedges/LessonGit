@@ -67,7 +67,7 @@ public class SumsTest {
 		assertEquals("FAILING - UNEQUAL",expected,output);
 	}
 
-	
+
 	@Test
 	public void This_tests_minusing() {
 		
@@ -81,6 +81,23 @@ public class SumsTest {
 		output = classUnderTest.operations(input1,input2);
 		
 		assertEquals("FAILING - UNEQUAL",expected,output);
+	}
+	
+	//shows that when first assert fails, the test STOPS - no further code executed
+	@Test
+	public void This_tests_deliberate_fail() {
+		
+		int input1 = 7;
+		int input2 = 2;
+		int expected = 5;
+		int output;
+		
+		MathematicalOperation classUnderTest = new minus();
+		
+		output = classUnderTest.operations(input1,input2);
+
+		assertEquals("FAILING - UNEQUAL",expected,4);
+		assertEquals("FAILING - UNEQUAL",expected,19);
 	}
 
 	@Test
@@ -96,16 +113,36 @@ public class SumsTest {
 		assertEquals("FAILING - UNEQUAL",expected,output);
 	}
 
-	@Test(timeout=27)
+	@Test(timeout=500)
 	public void This_tests_timeout() {
 
-		long input1 = 2;
+		int input1 = 5;
 		
-		while (input1>1){
+		while (input1<10){
 			input1++;
 		}
 	
-		fail("FAILING - UNEQUAL");
+		assertEquals("FAILING - UNEQUAL",input1,10);
 	}
+	
 
+	@Test(expected=IllegalArgumentException.class)
+	public void This_tests_exception_trycatch() {
+		
+		int input1 = 3;
+		int input2 = 0;
+		int expected = 45;
+		int output = 0;
+		
+		MathematicalOperation classUnderTest = new divide();
+		
+		try {
+			output = classUnderTest.operations(input1,input2);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		assertEquals("FAILING - UNEQUAL",expected,output);
+	}
 }
