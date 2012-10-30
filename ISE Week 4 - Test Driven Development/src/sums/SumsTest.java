@@ -134,7 +134,7 @@ public class SumsTest {
 	public void This_tests_exception_trycatch_method() {
 
 		int input1 = 3;
-		int input2 = 0; //NB - this fails when there is an 'ArithmeticException'
+		int input2 = 1; //NB - this fails when there is an 'ArithmeticException'
 		int output;
 		
 		MathematicalOperation sum = new Divider();
@@ -152,7 +152,7 @@ public class SumsTest {
 	public void This_tests_exception_not_trycatch() {
 
 		int input1 = 3;
-		int input2 = 1; //NB - this ONLY fails when there is NO 'ArithmeticException'
+		int input2 = 0; //NB - this ONLY fails when there is NO 'ArithmeticException'
 		int output;
 		
 		MathematicalOperation sum = new Divider();
